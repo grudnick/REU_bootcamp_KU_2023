@@ -1,0 +1,72 @@
+# Basic Linux (Unix) Commands                D.H.McIntosh  02/25/06
+#==================================================================
+# directories: when you login to an iMac you start at /Users/username/ 
+mkdir NewDir        - makes new directory (i.e., folder) /Users/username/NewDir/
+rmdir NewDir        - removes directory NewDir/
+cd NewDir           - change to new dir.
+cd ..               - go back ("up") one dir.
+cd                  - return to home dir.
+pwd                 - shows current dir.
+ls                  - list contents of dir.
+ls -la              - verbose listing
+
+# all files
+cp SomeFile NewFile - copies file to another file
+cp SomeFile NewDir/ - copies file to new dir.
+cp Dir/SomeFile .   - copies file in Dir to current dir. (.)
+cp ../SomeFile .    - copies file in one dir. up to current dir. (.)
+mv SomeFile NewDir/ - moves file to new dir.
+mv SomeFile ../../  - moves file up 2 dirs.
+mv *.txt NewDir/    - moves all files ending in .txt to new dir.
+rm SomeFile         - deletes file
+rm *                - deletes ALL files in dir. (Careful!)
+locate SomeFile     - finds dir. location for SomeFile
+
+# ascii (data) and text files
+wc -l SomeFile      - how many lines in file
+more SomeFile       - scroll thru file, carriage return for 1 line at a
+                      time, space bar for many lines at a time
+tail -9 SomeFile    - shows last 9 lines of file
+head -9 SomeFile    - shows first 9 lines of file
+grep string File    - finds every occurance of "string" in File
+
+# postscript, PDF, images
+open File.ext       - displays .pdf, .jpeg, .gif and other format files
+gv File.ps          - displays (ghostview) postscript file
+gv File.ps &        - display in background, means get prompt back
+
+# executable files: ones that do something
+which ExecFile      - shows dir. of known executable files
+chmod 754 code.pl   - required to make a code executable (necessary only once)
+./code.pl           - running an executable like a perl script
+
+# using tar: for making archives of many related files, also used for
+             reading/writing tapes
+tar cvf TarFile.tar . - copies entire contents of current dir. (.) into
+                        the tar archive named TarFile.tar
+tar cvf TarFile.tar File1 File3 File11 - puts 3 files in an archive
+tar xvf TarFile.tar   - unpacks tar archive
+tar xvfz TarFile.tar  - unpacks and unzips gzipped tar archive
+
+# misc.
+df -k               - shows disk space info in kb
+top                 - see all running processes
+gzip SomeFile       - compresses file, becomes SomeFile.gz
+ungzip SomeFile     - uncompresses file
+man <command> 	    - gives the manual page for that command
+
+# external machines
+ssh -X User@Machine - login (secure shell) to another machine, will
+                      be prompted for your password; -X means you can
+                      display files to local monitor
+scp File User@Machine:~/Dir/   - secure copy File TO Dir on another machine
+scp -r Dir/ User@Machine:~/    - secure copy entire Dir TO home dir. on
+                                 another machine
+scp User@Machine:~/Dir/File .  - secure copy File FROM another machine to
+                                 current machine
+passwd              - change your password
+
+
+# MANY more commands 
+see http://www.ss64.com/bash/
+or use www.google.com to search e.g. "basic linux commands"
