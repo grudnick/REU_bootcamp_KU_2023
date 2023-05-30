@@ -1,6 +1,7 @@
-# Basic Linux (Unix) Commands                D.H.McIntosh  02/25/06
+# Basic Linux (Unix) Commands               D.H.McIntosh  02/25/06 - revised by Greg Rudnick: 5/29/23
 #==================================================================
-# directories: when you login to an iMac you start at /Users/username/ 
+# directories: when you login to a Mac you start at /Users/username/ 
+# when you login to a linux box you start at /home/username
 mkdir NewDir        - makes new directory (i.e., folder) /Users/username/NewDir/
 rmdir NewDir        - removes directory NewDir/
 cd NewDir           - change to new dir.
@@ -20,7 +21,6 @@ mv SomeFile ../../  - moves file up 2 dirs.
 mv *.txt NewDir/    - moves all files ending in .txt to new dir.
 rm SomeFile         - deletes file
 rm *                - deletes ALL files in dir. (Careful!)
-locate SomeFile     - finds dir. location for SomeFile
 
 # ascii (data) and text files
 wc -l SomeFile      - how many lines in file
@@ -31,9 +31,9 @@ head -9 SomeFile    - shows first 9 lines of file
 grep string File    - finds every occurance of "string" in File
 
 # postscript, PDF, images
-open File.ext       - displays .pdf, .jpeg, .gif and other format files
-gv File.ps          - displays (ghostview) postscript file
-gv File.ps &        - display in background, means get prompt back
+open File.ext       - displays .pdf, .jpeg, .gif and other format files - only on Mac
+gv File.ps          - displays (ghostview) postscript file - may not be installed
+gv File.ps &        - display in background, means get prompt back - may not be installed
 
 # executable files: ones that do something
 which ExecFile      - shows dir. of known executable files
