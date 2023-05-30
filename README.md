@@ -1,1 +1,2 @@
-# REU_bootcamp_KU_2023
+# README
+This repository contains various files needed for the REU tutorial.
